@@ -25,6 +25,8 @@ SECRET_KEY = 'jd)l2ywfhh5_m7y4#@et-8wwffn*s%ewnq3p(+g5e9%la$7ip6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+APP_NAME = 'file_transfer_manager'
+
 ALLOWED_HOSTS = []
 
 
@@ -37,6 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_revision.apps.AppConfig',
+    'crispy_forms',
+    'django_js_reverse',
+    'tz_detect',
+    'edc_base.apps.AppConfig',
+    'edc_device.apps.AppConfig',
+    'file_transfer_manager.apps.AppConfig',
 ]
 
 MIDDLEWARE = [
@@ -113,6 +122,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+GIT_DIR = BASE_DIR
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
